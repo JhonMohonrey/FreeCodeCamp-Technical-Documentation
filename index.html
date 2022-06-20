@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>JAVASCRIPT :)</header>
+            <div>
+                 <a href="#STATEMENTS" class="nav-link">STATEMENTS</a>
+                 <a href="#COMMENTS" class="nav-link">COMMENTS</a>
+                 <a href="#WHAT_IS_A_VARIABLE?" class="nav-link">WHAT IS A VARIABLE?</a>
+                 <a href="#DATA_TYPES" class="nav-link">DATA TYPES</a>
+                 <a href="#RULES_FOR_NAMING_VARIABLES" class="nav-link">RULES FOR NAMING VARIABLES</a>
+            </div>
+        </nav>
+        
+        <section class="main-section" id="STATEMENTS">
+            <header>STATEMENTS</header>
+           <p>
+            A script is a series of instructions that a computer can follow one-by-one. 
+            Each individual instruction or step is known as a statement. 
+            Statements should end with a semicolon. 
+           </p>
+           <p>
+            We will look at what the code on the right does 
+            shortly, but for the moment note that:
+           </p>
+           <ul>
+               <li>
+                Each of the lines of code in green is a statement. 
+               </li>
+               <li>
+                The pink curly braces indicate the start and end 
+                of a code block. (Each code block could contain 
+                many more statements.)
+               </li>
+               <li>
+                The code in purple determines which code 
+                should run.
+               </li>
+           </ul>
+           <h4>
+            JAVASCRIPT IS CASE SENSITIVE 
+           </h4>
+           <p>
+            JavaScript is case sensitive so hourNow means 
+            something different to HourNow or HOURNOW. 
+           </p>
+           <h4>
+            STATEMENTS ARE INSTRUCTIONS AND 
+            EACH ONE STARTS ON A NEW LINE 
+           </h4>
+           <p>
+            A statement is an individual instruction that the 
+            computer should follow. Each one should start on a 
+            new line and end with a semicolon. This makes your 
+            code easier to read and follow. 
+            The semicolon also tells the JavaScript interpreter 
+            when a step is over, indicating that it should move 
+            to the next step. 
+           </p>
+           <h4>
+            STATEMENTS CAN BE ORGANIZED 
+            INTO CODE BLOCKS 
+           </h4>
+           <p>
+            Some statements are surrounded by curly braces; 
+            these are known as code blocks. The closing curly 
+            brace is not followed by a semicolon. 
+            Above, each code block contains one statement 
+            related to what the current time is. Code blocks 
+            will often be used to group together many more 
+            statements. This helps programmers organize their 
+            code and makes it more readable. 
+            
+           </p>
+        </section>
+
+        <section class="main-section" id="COMMENTS">
+            <header>COMMENTS</header>
+           <p>
+            You should write comments to explain what your code does. 
+            They help make your code easier to read and understand. 
+            This can help you and others who read your code. 
+           </p>
+           <h4>MULTI-LINE COMM ENTS</h4>
+           <p>
+                To write a comment that stretches over more than 
+                one line, you use a multi-line comment, starting with 
+                the /* characters and ending with the */ characters. 
+                Anything between these characters is not processed· 
+                by the JavaScript interpreter. 
+                M ulti-line comment s are often used for descriptions 
+                of how the script works, or to prevent a section of 
+                the script from running when testing it. 
+           </p>
+           <h4>
+              SINGLE-LINE COMMENTS
+           </h4>
+           <p>
+            In a single-line comment, anything that follows the 
+            two forward slash characters I/ on that line will not 
+            be processed by the JavaScript interpreter. Singleline comments are often used for short descriptions 
+            of what the code is doing. 
+            Good use of comments will help you if you come 
+            back to your code after several days or months. 
+            They also help those who are new to your code. 
+           </p>
+
+           <div class="codes">
+                <code>
+                    <span class="pink"> /* Th i s script displays a greeting to the user based upon the current time. 
+                    It is an example from JavaScript & jQuer y book */</span>
+                
+                </code>
+                <code>
+                    <span class="green"> var today = new Date(); </span><span class="gray">//Create a ne1~ dat e object</span><br>
+                    <span class="green"> var hour Now = today.getHours(); </span><span class="gray">//Fi nd the current hour</span> <br>
+                    <span class="green">var greeting; </span>
+                </code>
+                <code>
+                    <span class="gray">
+                        // JI Display the appropriate greeting ng based on the current time
+                    </span>
+                </code>
+                <code>
+                    <span class="green">
+                        if (hourNow > 18) { <br>
+                            greet ing = 'Good evening ' ; <br>
+                            else if (hourNow > 12) { <br>
+                            greeting = 'Good afternoon'; <br>
+                            else if (hourNow > 0) { <br>
+                            greeting= ' Good morning'; <br>
+                            else { <br>
+                            gr eeting = 'Welcome'; <br>
+                            } <br>
+                            document.write(greeting) ;<br>
+                    </span>
+                  
+                </code>
+                <code>
+                    <span class="pink">
+                        /* This is comment */
+                    </span>
+                </code>
+           </div>
+        
+        </section>
+
+        <section class="main-section" id="WHAT_IS_A_VARIABLE?">
+            <header>WHAT IS A VARIABLE?</header>
+           <p>
+                A script will have to temporarily 
+                store the bits of information it 
+                needs to do its job. It can store this 
+                data in variables. 
+                When you write JavaScript, you have to tell the 
+                interpreter every individual step that you want it to 
+                perform. This sometimes involves more detail than 
+                you might expect. 
+                Think about calculating the area of a wall; in math 
+                the area of a rectangle is obtained by multiplying two 
+                numbers:
+           </p>
+           <div class="codes">
+               <code>
+                   <span class="green">
+                    width x height = area
+                   </span>
+               </code>
+           </div>
+           <p>
+                You may be able to do calculations like this in 
+                your head, bu t when writing a script to do this 
+                calculation, you need to give the computer very 
+                detailed instructions. You might tell it to perform the 
+                following four steps in order: 
+           </p>
+           <ul>
+               <li>Remember the value for width </li>
+               <li>Remember the value for height </li>
+               <li>Multiply width by height to get the area</li>
+               <li>Return the result to the user </li>
+           </ul>
+           <p>
+                In this case, you would use variables to "remember" 
+                the values for width and height. (This also illustrates 
+                how a scrip( contains very explicit instructions about 
+                exactly what you want the computer to do.) 
+                You can compare variables to short-term memory, 
+                because once you leave the page, the browser will 
+                forget any information it holds. 
+                A variable is a good name for this 
+                concept because the data stored 
+                in a variable can change (or vary) 
+                each time a script runs. 
+                No matter what the dimensions of any individual 
+                wall are, you know that you can find its area by 
+                multiplying the width of that wall by its height. 
+                Similarly, scripts often need to achieve the same 
+                goal even when they are run with different data, so 
+                variables can be used to represent values in your 
+                scripts that are likely to change. The result is said to 
+                be calculated or computed using the data stored in 
+                the variables. 
+                The use of variables to represent numbers or other 
+                kinds of data is very similar to the concept of algebra 
+                (where le.tters are used to represent numbers). 
+                There is one key difference, however. The equals 
+                sign does something very different in programming 
+                (as you will see on the next two pages).
+           </p>
+        </section>
+
+        <section class="main-section" id="DATA_TYPES">
+            <header>DATA TYPES</header>
+           <p>
+                JavaScript distinguishes between numbers, 
+                strings, and true or false values known as 
+                Booleans. 
+           </p>
+           <h4>
+            NUMERIC DATA TYPE 
+            The numeric data type handles 
+            numbers.
+           </h4>
+           <ul>
+               <li>0.75 </li>
+           </ul>
+           <p>
+            For tasks that involve counting 
+            or calculating sums, you will 
+            use numbers 0-9. For example, 
+            five thousand, two hundred and 
+            seventy-two would be written 
+            5272 (note there is no comma 
+            between the thousands and 
+            the hundreds). You can also 
+            have negative numbers (such 
+            as -23678) and decimals (three 
+            quarters is written as 0.75). 
+           </p>
+
+           <h4>
+            STRING DATA TYPE
+           </h4>
+           <p>
+            The strings data type consists of 
+            letters and other characters. 
+           </p>
+           <ul>
+               <li>
+                'H. 1 ' Ivy! 1
+               </li>
+           </ul>
+           <p>
+            Note how the string data type is 
+            enclosed within a pair of quotes. 
+            These can be single or double 
+            quotes, but the opening quote 
+            must match the closing quote.
+            Strings can be used when 
+            working with any kind of text. 
+            They are frequently used to add 
+            new content into a page and they 
+            can contain HTML markup. 
+           </p>
+           <h4>
+            BOOLEAN DATA TYPE
+           </h4>
+           <p>
+            Boolean data types can have one 
+            of two values: true or false. 
+           </p>
+           <ul>
+               <li>
+                true
+               </li>
+           </ul>
+           <p>
+            It might seem a little abstract at 
+            first, but the Boolean data type is 
+            actually very helpful. You can think of it a little like a 
+            light switch - it is either on or off. 
+            As you will see in Chapter 4, 
+            Booleans are helpful when 
+            determining which part of a 
+            script should run. 
+           </p>
+        </section>
+
+        
+        <section class="main-section" id="RULES_FOR_NAMING_VARIABLES">
+            <header>RULES FOR NAMING VARIABLES</header>
+            <p>
+                Here are six rules you must always follow when giving a variable a name:
+            </p>
+           <ul>
+               <li>
+                The name must begin with 
+                a letter, dollar sign ($),or an 
+                underscore (_). It must not start 
+                with a number.
+               </li>
+               <li>
+                The name can contain letters, 
+                numbers, dollar sign ($), or an 
+                underscore (_). Note that you 
+                must not use a dash(-) or a 
+                period (.) in a variable name. 
+               </li>
+               <li>
+                You cannot use keywords or 
+                reserved words. Keywords 
+                are special words that tell the 
+                interpreter to do something. For 
+                example, var is a keyword used 
+                to declare a variable. Reserved 
+                words are ones that may be used 
+                in a future version of JavaScript. 
+                ONLINE EXTRA 
+                View a full list of keywords and 
+                reserved words in JavaScript. 
+               </li>
+               <li>
+                All variables are case sensitive, 
+                so score and Score would be 
+                different variable names, but 
+                it is bad practice to create two 
+                variables that have the same 
+                name using different cases. 
+               </li>
+               <li>
+                Use a name that describes the 
+                kind of information that the 
+                variable stores. For example, 
+                fi rstName might be used to 
+                store a person's first name, 
+                l astNarne for their last name, 
+                and age for their age.
+               </li>
+               <li>
+                If your variable name is made 
+                up of more than one word, use a 
+                capital letter for the first letter of 
+                every word after the first word. 
+                For example, f i rstName rather 
+                than fi rstnarne (this is referred 
+                to as camel case). You can also 
+                use an underscore between each 
+                word (you cannot use a dash).
+               </li>
+           </ul>
+        </section>
+
+       
+    </main>
+</body>
+</html>

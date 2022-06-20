@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-section {
+  background: #e7e7e7;
+  width: 95%;
+  min-width: auto;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  max-width: 1000px;
+  margin: 20px auto;
+  height: auto;
+}
+
+.main-section h4 {
+  font-family: arial;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.main-section header {
+  font-weight: bold;
+  font-family: arial;
+  text-align: center;
+}
+
+.main-section p {
+  padding: 10px;
+  font-family: arial;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin: 0;
+}
+
+.main-section ul li {
+  font-family: arial;
+  font-size: 15px;
+  margin: 20px 5px;
+}
+
+.main-section .codes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  row-gap: 10px;
+  padding: 10px;
+}
+
+.main-section code {
+  background: black;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.main-section code .green {
+  color: #00bd00;
+  font-family: arial;
+}
+
+.main-section code .gray {
+  color: gray;
+  font-family: arial;
+}
+
+.main-section code .pink {
+  color: pink;
+  font-family: arial;
+}
+
+#navbar {
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+  background: #dedede;
+  padding: 2px 0;
+  width: 95%;
+  min-width: auto;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+#navbar header {
+  margin: 5px 2px 20px;
+  font-family: arial;
+  text-align: center;
+  font-size: 30px;
+}
+
+#navbar div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  margin: 10px;
+}
+
+#navbar a {
+  background: white;
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: arial;
+  font-weight: bold;
+  color: black;
+}
+
+#navbar a:hover {
+  background: #464646;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-section {
+    width: 90%;
+    min-width: 262px;
+  }
+  .main-section header {
+    font-size: 15px;
+  }
+  .main-section p {
+    font-size: 14px;
+  }
+  .main-section h4 {
+    font-size: 10px;
+  }
+  .main-section ul li {
+    font-size: 12px;
+  }
+  .main-section .codes code {
+    font-size: 10px;
+  }
+  #navbar {
+    width: 90%;
+    min-width: 262px;
+  }
+  #navbar div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #navbar a {
+    margin: 3px 0;
+  }
+}
